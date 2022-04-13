@@ -1,69 +1,25 @@
-# Program to sort alphabetically the words form a string provided by the user
+# Program to check if a number is prime or not
 
-my_str = "Hello this Is an Example With cased letters"
+num = 29
 
+# To take input from the user
+#num = int(input("Enter a number: "))
 
-# breakdown the string into a list of words
-words = my_str.split()
+# define a flag variable
+flag = False
 
-# sort the list
-words.sort()
+# prime numbers are greater than 1
+if num > 1:
+    # check for factors
+    for i in range(2, num):
+        if (num % i) == 0:
+            # if factor is found, set flag to True
+            flag = True
+            # break out of loop
+            break
 
-# display the sorted words
-
-print("The sorted words are:")
-for word in words:
-       print(word)
-
-
-       # Program to sort alphabetically the words form a string provided by the user
-
-       my_str = "Hello this Is an Example With cased letters"
-
-
-       # breakdown the string into a list of words
-       words = my_str.split()
-
-       # sort the list
-       words.sort()
-
-       # display the sorted words
-
-       print("The sorted words are:")
-       for word in words:
-              print(word)
-
-              # Program to sort alphabetically the words form a string provided by the user
-
-              my_str = "Hello this Is an Example With cased letters"
-
-
-              # breakdown the string into a list of words
-              words = my_str.split()
-
-              # sort the list
-              words.sort()
-
-              # display the sorted words
-
-              print("The sorted words are:")
-              for word in words:
-                     print(word)
-
-                     # Program to sort alphabetically the words form a string provided by the user
-
-                     my_str = "Hello this Is an Example With cased letters"
-
-
-                     # breakdown the string into a list of words
-                     words = my_str.split()
-
-                     # sort the list
-                     words.sort()
-
-                     # display the sorted words
-
-                     print("The sorted words are:")
-                     for word in words:
-                            print(word)
-                            
+# check if flag is True
+if flag:
+    print(num, "is not a prime number")
+else:
+    print(num, "is a prime number")
